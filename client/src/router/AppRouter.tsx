@@ -1,6 +1,5 @@
 import { Route, Routes } from "react-router-dom";
-import BooksRoutes from "../routes/BooksRoutes";
-
+import BooksRoutes from "../books/routes/BooksRoutes";
 
 export default function AppRouter() {
   return (
