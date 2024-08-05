@@ -1,0 +1,46 @@
+{
+  "genres": [
+    {
+      "name": "Fiction",
+      "subcategories": [
+        "Classics",
+        "Mystery",
+        "Suspense",
+        "Science Fiction",
+        "Fantasy",
+        "Romance",
+        "Horror",
+        "Historical",
+        "Adventure",
+        "Thriller"
+      ]
+    },
+    {
+      "name": "Non-fiction",
+      "subcategories": [
+        "History",
+        "Philosophy",
+        "Psychology",
+        "Politics",
+        "Cooking",
+        "Travel"
+      ]
+    },
+    {
+      "name": "Academic and Professional",
+      "subcategories": [
+        "Mathematics",
+        "Physics",
+        "Chemistry",
+        "Biology",
+        "Engineering",
+        "Law",
+        "Medicine",
+        "Education",
+        "Sociology",
+        "Anthropology",
+        "Linguistics"
+      ]
+    }
+  ]
+}
