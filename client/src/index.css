@@ -6,6 +6,7 @@ html, body {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "lato-regular";
 }
 
 .swiper__container {
@@ -64,17 +65,19 @@ html, body {
   transition: all 0.5s;
 }
 
-.swiper__button:hover {
-  background-color: rgba(255, 255, 255, 1);
-  transition: all 0.5s;
-}
-
 .swiper__button:hover svg {
   transition: all 0.5s;
 }
 
 .swiper__container:hover > .swiper__button {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(255, 255, 255, .8);
+  opacity: 1;
+  transition: all 0.8s;
+  visibility: visible;
+}
+
+.dark .swiper__container:hover > .swiper__button {
+  background-color: rgba(32, 33, 36, .8);
   opacity: 1;
   transition: all 0.8s;
   visibility: visible;
@@ -82,6 +85,12 @@ html, body {
 
 .swiper-container:hover > .swiper__button svg {
   transition: all 1s;
+  stroke: black;
+}
+
+.dark .swiper-container:hover > .swiper__button svg {
+  transition: all 1s;
+  stroke: white;
 }
 
 @media only screen and (max-width: 700px) {
@@ -94,12 +103,20 @@ html, body {
 }
 
 @font-face {
-  font-family: "cursive";
+  font-family: "lato-regular";
   font-weight: 400;
   font-style: normal;
-  src: url("assets/fonts/Sofia.ttf") format('truetype');
+  src: url("assets/fonts/Lato-Regular.ttf") format('truetype');
 }
 
 .cursive {
-  font-family: "cursive";
+  font-family: "lato-regular";
+}
+
+[data-color-scheme="dark"] {
+  color-scheme: dark;
+}
+
+[data-color-scheme="light"] {
+  color-scheme: light;
 }
