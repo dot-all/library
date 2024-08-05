@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <header className="bg-orange-500 dark:bg-orange-600  sticky top-0 z-50">
       <section className="flex items-center h-16 text-white w-11/12 mx-auto justify-between">
-      <Link to="/"><h1 className="text-xl mx-2 font-semibold">BOOKS</h1></Link>
+      <Link to="/"><h1 className="text-base md:text-xl mx-2 font-semibold">LIBRARY</h1></Link>
       <ul className="flex items-center gap-4 text-sm md:text-base">
         <li>
           <Link to="/category">
