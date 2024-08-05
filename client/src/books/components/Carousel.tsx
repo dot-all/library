@@ -2,7 +2,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import { Navigation, Controller } from "swiper/modules";
 import { Link } from "react-router-dom";
-import { Book, IndustryIdentifier } from '../../types/book';
+import { Book } from '../../types/book';
 
 interface CarouselProps {
   data: Book[];
@@ -20,7 +20,7 @@ export const Carousel = ({
           className={`button__next-${id} swiper__button button__next`}
           id={id}
         >
-          <svg xmlns="http://www.w3.org/2000/svg" className="w-[18px] stroke-black" viewBox="0 0 512 512"><path fill="none" strokeLinecap="round" strokeLinejoin="round" strokeWidth="48" d="M268 112l144 144-144 144M392 256H100"/></svg>
+          <svg xmlns="http://www.w3.org/2000/svg" className="w-[18px]" viewBox="0 0 512 512"><path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="48" d="M268 112l144 144-144 144M392 256H100"/></svg>
         </div>
         <div
           className={`button__prev-${id} swiper__button button__prev`}
@@ -80,7 +80,7 @@ export const Carousel = ({
         >
           {data.map((book: Book) => {
             return (
-              <SwiperSlide key={book.id} className="swiper__slide transition-shadow duration-500 flex items-center justify-center">
+              <SwiperSlide key={book.id} className="swiper__slide transition-shadow duration-500 flex items-center justify-center dark:bg-[#202124] dark:text-white">
                 <Link to={`book/${book.id}`} className="h-full flex flex-col items-center">
                   {book.volumeInfo.imageLinks ? (
                     <img
@@ -92,11 +92,11 @@ export const Carousel = ({
                       className="h-32 sm:h-48 md:h-56 xl:h-60 w-full"
                     />
                   ) : (
-                    <div className="h-32 sm:h-48 md:h-56 xl:h-60 w-full flex items-center justify-center bg-gray-300">
+                    <div className="h-32 sm:h-48 md:h-56 xl:h-60 w-full flex items-center justify-center bg-gray-300 dark:bg-[#202124]">
                       <span className="text-center">{book.volumeInfo.title}</span>
                     </div>
                   )}
-                  <h3 className="text-[12px] md:text-base mt-2 w-full bg-white">{book.volumeInfo.title}</h3>
+                  <h3 className="text-[12px] md:text-base mt-2 w-full bg-white dark:bg-[#202124]">{book.volumeInfo.title}</h3>
                 </Link>
               </SwiperSlide>
             );
