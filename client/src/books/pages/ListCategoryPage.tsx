@@ -5,6 +5,7 @@ import { fetchBooks } from '../../api/api';
 import { Book } from '../../types/book';
 import BookCard from '../components/BookCard';
 import SkeletonBookCard from '../components/SkeletonCard';
+import Footer from '../../ui/Footer';
 
 const ListCategoryPage: React.FC = () => {
   const { category } = useParams<{ category: string }>();
@@ -37,34 +38,37 @@ const ListCategoryPage: React.FC = () => {
   return (
     <>
       <Navbar />
-      <main className="w-11/12 mx-auto mt-8">
-        <button onClick={onNavigateBack} className='flex flex-row items-center text-orange-500 hover:text-orange-400'>
-          <svg xmlns="http://www.w3.org/2000/svg" className="w-5 mt-0 md:mt-1" viewBox="0 0 512 512">
-            <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="48" d="M244 400L100 256l144-144M120 256h292"/>
-          </svg>
-          VOLVER
-        </button>
-        <h2 className="text-2xl font-medium text-orange-500 mt-8">Libros {category}</h2>
-        {loading && (
-          <ul className="mt-4">
-            {Array.from({ length: 5 }).map((_, i) => (
-              <li key={i}>
-                <SkeletonBookCard />
-              </li>
-            ))}
-          </ul>
-        )}
-        {error && <p className="text-red-500">{error}</p>}
-        {!loading && !error && (
-          <ul className="mt-4">
-            {books.map((book, i) => (
-              <li key={i}>
-                <BookCard book={book} />
-              </li>
-            ))}
-          </ul>
-        )}
+      <main className="py-8 dark:bg-[#202124]">
+        <section className='w-11/12 mx-auto'>
+          <button onClick={onNavigateBack} className='flex flex-row items-center text-orange-500 hover:text-orange-400'>
+            <svg xmlns="http://www.w3.org/2000/svg" className="w-5 mt-0 md:mt-1" viewBox="0 0 512 512">
+              <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="48" d="M244 400L100 256l144-144M120 256h292"/>
+            </svg>
+            VOLVER
+          </button>
+          <h2 className="text-2xl font-medium text-orange-500 mt-8">Libros {category}</h2>
+          {loading && (
+            <ul className="mt-4">
+              {Array.from({ length: 5 }).map((_, i) => (
+                <li key={i}>
+                  <SkeletonBookCard />
+                </li>
+              ))}
+            </ul>
+          )}
+          {error && <p className="text-red-500">{error}</p>}
+          {!loading && !error && (
+            <ul className="mt-4">
+              {books.map((book, i) => (
+                <li key={i}>
+                  <BookCard book={book} />
+                </li>
+              ))}
+            </ul>
+          )}
+        </section>
       </main>
+      <Footer/>
     </>
   )
 }
