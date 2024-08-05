@@ -1,4 +1,4 @@
-import AppRouter from "./books/router/AppRouter";
+import AppRouter from "./router/AppRouter";
 
 export default function BookApp() {
   return (
