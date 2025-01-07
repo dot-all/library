@@ -1,5 +1,5 @@
 # Library
-Library is a web application for searching and exploring books. It uses the Google Books API to provide detailed information on a wide range of genres and categories of books. This application is built with React, TypeScript, and Tailwind CSS, using React Router for navigation and Axios for HTTP requests.
+Library is a web application for searching and exploring books. It uses the Google Books API to provide detailed information on a wide range of genres and categories of books. This application is built with React, TypeScript, and Tailwind CSS, using React Router for navigation and Axios for HTTPS requests.
 
 <a target="_blank" href="https://library-dom.netlify.app/">
   <img src="./client/src/assets/library.png">
